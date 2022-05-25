@@ -27,20 +27,31 @@ class Graph
         }
     }
     public void displayEdge(){
-        System.out.println("\n Connected Edges:");
+        System.out.println("\nConnected Edges:");
+         if(n == 0){
+            System.out.print("\nGraph is Empty.!!\n");
+        }
+        boolean flag = true;
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) {
                 if(g[i][j] > 0){
+                    flag = false;
                     System.out.print(airports[i]+"->"+airports[j]);
                     System.out.println();
                 }
 
             }
         }
+        if(flag){
+            System.out.print("\nNo Edge present in graph.!!\n");
+        }
         //System.out.println();
     }
     public void displayAdjacencyMatrix() {
-        System.out.print("\n Adjacency Matrix: \n");
+        System.out.print("\nAdjacency Matrix: \n");
+        if(n == 0){
+            System.out.print("\nGraph is Empty.!!\n");
+        }
         boolean flag = true;
         for(int i=0; i<n; i++){
             if(flag){
@@ -60,6 +71,10 @@ class Graph
         }
     }
     public void flightAvailable(String source,String dest) {
+        if(airportToVertex.get(source) == null || airportToVertex.get(dest) == null){
+            System.out.println("Invalid Source "+source+" and destination:"+dest);
+            return;
+        }
         int x = airportToVertex.get(source);
         int y = airportToVertex.get(dest);
         if ((x >= n) || (y > n))
@@ -78,6 +93,10 @@ class Graph
     }
 
     public void addEdge(String source, String dest,int weight) {
+        if(airportToVertex.get(source) == null || airportToVertex.get(dest) == null){
+            System.out.println("Invalid Source "+source+" and destination:"+dest);
+            return;
+        }
         int x = airportToVertex.get(source);
         int y = airportToVertex.get(dest);
         // checks if the vertex exists in the Graph
@@ -100,6 +119,10 @@ class Graph
         }
     }
     public void removeEdge(String source, String dest) {
+        if(airportToVertex.get(source) == null || airportToVertex.get(dest) == null){
+            System.out.println("Invalid Source "+source+" and destination:"+dest);
+            return;
+        }
         int x = airportToVertex.get(source);
         int y = airportToVertex.get(dest);
         // checks if the vertex exists in the Graph
@@ -124,6 +147,10 @@ class Graph
     public void addVertex(String airport) {
         // increasing the number of vertices(this)
         this.airports[n] = airport;
+        if(airportToVertex.get(airport) != null) {
+            System.out.println("vertex is already present : "+airport);
+            return;
+        }
         airportToVertex.put(airport,n);
         n++;
         int i;
@@ -147,6 +174,10 @@ class Graph
         n--;
     }
     public void bfs(String source) {
+        if(airportToVertex.get(source) == null){
+            System.out.println("Invalid Source :"+source);
+            return;
+        }
         System.out.println("Breath First Search for the given source :"+source);
         int vertex = airportToVertex.get(source);
         Queue queue = new Queue(n);
@@ -164,7 +195,12 @@ class Graph
             }
         }
     }
+
     public void dfs(String source) {
+        if(airportToVertex.get(source) == null){
+            System.out.println("Invalid Source :"+source);
+            return;
+        }
         System.out.println("Depth First Search for the given source :"+source);
         int vertex = airportToVertex.get(source);
         Stack<Integer> stack = new Stack<>(n);
