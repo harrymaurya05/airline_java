@@ -4,13 +4,23 @@ class GraphClass {
     public static void main(String[] args) {
         // creating objects of class Graph
         Graph graph = new Graph(0);
+        String [] vertexTest = {"A","B","C","D"};
+        for(String str : vertexTest) {
+            graph.addVertex(str);
+        }
+        // connecting that vertex to other existing vertices
+        graph.addEdge("A", "C",9);
+        graph.addEdge("A","B",5);
+        graph.addEdge("A","D",7);
+        graph.addEdge("C","D",8);
+        graph.addEdge("B","D",6);
         int choice = 10;
         while(choice != 0){
             System.out.println("********** AIRLINE APPLICATION ************");
-            System.out.println("\n\n1.AddVertex\n" + "2.removeVertex\n" + "3.AddEdge\n"
-                + "4.removeEdge\n" + "5.DisplayAdjacentMatrix\n" + "6.DisplayEdges\n"
-                + "7.BFS\n" + "8.DFS\n" + "9.Check Flight availability\n"
-                + "0.exit()");
+            System.out.println("\n\n 1. AddVertex\n" + " 2. RemoveVertex\n" + " 3. AddEdge\n"
+                + " 4. RemoveEdge\n" + " 5. DisplayAdjacentMatrix\n" + " 6. DisplayEdges\n"
+                + " 7. BFS\n" + " 8. DFS\n" + " 9. Check Flight availability\n"
+                + " 0. Exit()");
             System.out.println("Enter your Choice.");
             Scanner scanner = new Scanner(System.in);
             try{
