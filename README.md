@@ -1,5 +1,9 @@
 # airline_java
+Command to run:
+javac *.java
+java GraphClass
 
+*******************
 Lab Sheet -2 Topic: Airline Tickets
 General Instructions for Programming :
 1. All inputs to the program must be command line arguments.
