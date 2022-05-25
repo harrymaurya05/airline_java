@@ -81,7 +81,8 @@ class Graph
         int x = airportToVertex.get(source);
         int y = airportToVertex.get(dest);
         // checks if the vertex exists in the Graph
-        if ((x >= n) || (y > n))
+        //System.out.println("x:"+x+" y:"+y+" n:"+n);
+        if ((x >= n) || (y >= n))
         {
             System.out.println("Vertex does not exists!");
         }
