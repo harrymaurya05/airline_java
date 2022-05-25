@@ -32,27 +32,35 @@ Precond : All vertices are already added to the Graph
 Effect : the program finds the vertex at the entered position and removes it from the list of vertices. It also checks if there are any edges associated with that vertex and resets their weight to Zero. It also
    
 adjusts the weights in the Adjacency Martix to reflect the correct weights for the other edges in the graph.
+
 3) Add Edge: void addEdge(String v,String w, int x)
 Precond : All vertices v and w are already added to the Graph
 Effect : the program finds the position of each of the vertices v and w and records the weight x against edge for v and w
+
 4) Remove Edge: void removeEdge(String v,String w)
 Precond : All vertices are already added to the Graph
 Effect : the program finds the position of the vertices in the Graph and resets the corresponding edge weight to Zero.
+
 5) Display Adjacency Matrix: void displayAdj()
 Precond: Graph is not empty
 Effect: Displays all vertices in a 2 by 2 matrix. Each valid edge is represented by the weight of the edge displayed in the corresponding position in the matrix. Each invalid edge is represented by Zero weight.
+
 6) Display Edges: void displayEdges()
 Precond : Graph is not empty
 Effect: Displays all combinations of valid edges. For example: if there is a valid edge between A and B, then the program will show both “A->B” and “B->A”
+
 7) BFS: void BFS(String v)
 Precond : Graph is not empty
 Effect : Display the vertices in the Graph starting with the vertex input by the user and then traversing the graph using BFS.
+
 8) BFS: void DFS(String v)
 Precond : Graph is not empty
 Effect : Display the vertices in the Graph starting with the vertex input by the user and then traversing the graph using DFS.
+
 9) Check Flight Availability: void flightAvailable(String s,String d)
 Precond : Graph is not empty
 Effect : Based on the source s and destination d entered, the program displays the weight (cost) of the edge if it is a valid edge. If the edge is not a valid one, a relevant message is displayed.
+
 
 Input:
 The input to the program should be provided real time through the command prompt. The following input considerations need to be made:
