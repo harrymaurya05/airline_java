@@ -5,10 +5,14 @@ General Instructions for Programming :
 1. All inputs to the program must be command line arguments.
 2. Use standard Java coding conventions. Each class: Graph, Queue, Stack and Main code should be written in separate .java files.
 Problem Statement:
+
 a. Create an ADT for an undirected, weighted graph, represented by an adjacency matrix. Use whole numbers for the weights.
+
 b. Write a simple application that simulates an airline's graph of ticket prices. The program should read in vertices and prices and keep an array that maps vertices to the names of the airports. For each route that the airline does not fly, store Zero. Once the graph is set up, the program should accept queries consisting of the names of two airports and either report a cost or report that no flight is available.
+
 c. The (Depth-First Search DFS) or (Breadth First Search BFS) algorithm can be used to traverse all the vertices of a graph
 Below is the list of operations the program should be able to perform
+
 1. Add Vertex (Airport / City)
 2. Remove Vertex (Airport / City)
 3. Add Edge (Source, Destination and Airfare)
