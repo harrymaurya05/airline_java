@@ -18,7 +18,7 @@ class GraphClass {
         while(choice != 0){
             System.out.println("********** AIRLINE APPLICATION ************");
             System.out.println("\n\n 1. AddVertex\n" + " 2. RemoveVertex\n" + " 3. AddEdge\n"
-                + " 4. RemoveEdge\n" + " 5. DisplayAdjacentMatrix\n" + " 6. DisplayEdges\n"
+                + " 4. RemoveEdge\n" + " 5. Display Adjacent Matrix\n" + " 6. DisplayEdges\n"
                 + " 7. BFS\n" + " 8. DFS\n" + " 9. Check Flight availability\n"
                 + " 0. Exit()");
             System.out.println("Enter your Choice.");
